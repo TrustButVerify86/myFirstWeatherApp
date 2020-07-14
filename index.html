@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>C's Weather App</title>
+
+</head>
+<body>
+
+	<div class="container">
+		<!---First Row, Header Row-->
+		<div class="row">
+		<div class="col ">
+		<h1>weather app</h1>
+		</div>
+		</div>
+		
+		<!---Second Row, Location Label/Temp and Choose City Label/ Search Bar/ Buttons -->
+		<div class="row">
+		<div class="col-4 textstyle " >
+			<span class="textstyle" id="cityName">reseda,ca</span>
+			<h3 id="date">Tue 6/20/2020 </h3><h3 id="time">12:00pm</h3>
+		<div class="col" >
+			<span class="currentTemp" id="currentTemp">	68</span><a href="" title="faren" id="faren">°F</a>/<a href="" title="Celsius" id="celsius">°C</a>	
+			</div>
+			
+		</div>
+	
+		<div class="col-1 " >
+			<span><h2>☀️</h2></span></div>
+			<div class="col-3 " >
+			<span ><h3 class ="weatherInfo" id="condition">Condition</h3>
+			<h3 class ="weatherInfo" id="humidity">Humidity</h3>
+			<h3 class ="weatherInfo" id="windSpeed">Wind</h3></span>
+		</div>
+		
+		<div class="col textstyle align-self-start">
+				city location
+				<form id="citySearch">
+						<div class="form-row inputBar" id="input" >
+								<input type="text" class="form-control " id="inlineFormInputName" >
+						</div> 
+						<div class="col tempbutton ">
+							<button type="submit" value="submit" form="citySearch"class="searchbutton"id="submitCity">🔎 </button>
+							<button type="submit"  class="searchbutton" id="geoLoc">📍</button>
+						</div>
+						
+				</form>
+				</div>
+		</div>
+		
+		<!---Third Row, Five Day Forecast Day of the Week Labels-->
+		
+				<div class="fivedayforecast">
+				<div class="row row-cols-5 ">
+						
+						<div class="col label align-self-end " id="dayOne">
+							monday
+						</div>
+						<div class="col label align-self-end " id="dayTwo">
+							tuesday
+						</div>
+						<div class="col label align-self-end " id="dayThree">
+							wednesday
+						</div>
+						<div class="col label align-self-end " id="dayFour">
+							thursday
+						</div>
+						<div class="col label align-self-end " id="dayFive">
+							friday
+						</div>
+			</div>
+		<!---Fourth Row, Five Day High Temps -->
+			<div class="row row-cols-5 ">
+						
+				<div class="col  hightemp" id="dayOneHighTemp">
+					78°F<br/>🌥️
+					<div class="col lowtemp"id="dayOneLowTemp">
+						58°F<br/>
+					</div>
+				</div>
+				<div class="col hightemp"id="dayTwoHighTemp">
+					82°F<br/>☀️
+					<div class="col lowtemp"id="dayTwoLowTemp">
+						63°F
+					</div>
+				</div>
+				<div class="col hightemp"id="dayThreeHighTemp">
+					80°F<br/>☀️
+					<div class="col lowtemp"id="dayThreeLowTemp">
+						68°F
+					</div>
+				</div>
+				<div class="col hightemp"id="dayFourHighTemp">
+					81°F<br/>⛅
+					<div class="col lowtemp"id="dayFourLowTemp">
+						68°F
+					</div>
+				</div>
+				<div class="col hightemp"id="dayFiveHighTemp">
+					95°F<br/>🌪️
+					<div class="col lowtemp"id="dayFiveLowTemp">
+						73°F
+					<div>
+				</div>
+		</div>
+	
+		</div>
+		
+		</div>
+		<!---Footer Giving Credit-->
+		<footer >
+		 
+			<br/><br/><br/>
+			<h3>coded by constance mayaki</h3>
+    </footer>
+		
+			 
+
+	<script src="src/index.js">
+	</script>
+
+
+
+<div id="app"></div>
+</body>
+
+</html>
