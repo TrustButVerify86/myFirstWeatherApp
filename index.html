@@ -22,28 +22,26 @@
 		
 		<!---Second Row, Location Label/Temp and Choose City Label/ Search Bar/ Buttons -->
 		<div class="row">
-			<div class="currentDayWeather" id="currentDayWeather">
-		<div class="col-4 textstyle " >
-			<ul>
-				<li class="textstyle" id="cityName">reseda,ca</li>
-					<li id="date">Tue 6/20/2020 </li><li id="time">12:00pm</li>
-		<div class="col" >
-			<li class="currentTemp" id="currentTemp">	68</li><li><a href="" title="faren" id="faren">°F</a>/<a href="" title="Celsius" id="celsius">°C</a></li>	
+		<div class="col-3 textstyle " >
+			<span class="textstyle" id="cityName">reseda,ca</span>
+			<h3 id="date">Tue 6/20/2020 </h3><h3 id="time">12:00pm</h3>
+		<div class="col-sm" >
+			<span class="currentTemp" id="currentTemp">	68</span><a href="" title="faren" id="faren">°F</a>/<a href="" title="Celsius" id="celsius">°C</a>	
 			</div>
-			</ul>
+			
 		</div>
 	
-		<div class="col-1 " >
-			<span><h2>☀️</h2></span></div>
+		<div class="col-1" >
+			<span><h2 class="emoji">☀️</h2></span></div>
 			<div class="col-3 " >
-			<ul>
-			<li class ="weatherInfo" id="condition">Condition</li>
+				<ul>
+			<span ><li class ="weatherInfo" id="condition">Condition</li>
 			<li class ="weatherInfo" id="humidity">Humidity</li>
-			<li class ="weatherInfo" id="windSpeed">Wind</li>
-		</ul>
+			<li class ="weatherInfo" id="windSpeed">Wind</li></span>
+			</ul>
 		</div>
-		</div>
-		<div class="col textstyle align-self-start">
+		
+		<div class="col-md textstyle align-self-start">
 				city location
 				<form id="citySearch">
 						<div class="form-row inputBar" id="input" >
@@ -64,19 +62,19 @@
 				<div class="row row-cols-5 ">
 						
 						<div class="col label align-self-end " id="dayOne">
-							monday
+							mon
 						</div>
 						<div class="col label align-self-end " id="dayTwo">
-							tuesday
+							tue
 						</div>
 						<div class="col label align-self-end " id="dayThree">
-							wednesday
+							wed
 						</div>
 						<div class="col label align-self-end " id="dayFour">
-							thursday
+							thur
 						</div>
 						<div class="col label align-self-end " id="dayFive">
-							friday
+							fri
 						</div>
 			</div>
 		<!---Fourth Row, Five Day High Temps -->
@@ -112,18 +110,18 @@
 						73°F
 					<div>
 				</div>
+		</div>
 	
+		</div>
+		
+		</div>
 		<!---Footer Giving Credit-->
 		<footer >
 		 
 			<br/><br/><br/>
-			<h3><a href="https://github.com/TrustButVerify86/myFirstWeatherApp" >Open Source</a> coded by constance mayaki</h3>
+			<h3><a href="https://github.com/TrustButVerify86/myFirstWeatherApp" target="_blank"> open source </a>coded by constance mayaki</h3>
     </footer>
-</div>
-	
-</div>
-
-</div>	
+		
 			 
 
 	<script src="src/index.js">
