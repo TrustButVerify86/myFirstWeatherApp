@@ -1,6 +1,6 @@
 
   /*First Row, Header Row */
-h1{
+  h1{
     font-family: 'Chelsea Market', cursive;
     text-align:center;
     font-size: 80px;
@@ -22,16 +22,11 @@ h3 {
     opacity: 40%;
 }
 
-.weatherInfo{
-    display: block;
-    align-self:left;
-    font-family: 'Chelsea Market', cursive;
-    font-size: 22px;
-    color:#75B6E0 ;
-    opacity: 40%;
-    padding-top: 40px;
-}
+
   /*Second Row, Location Temp */
+  li{
+    list-style: none;
+  }
 .currenttemp{
     border-radius: 10px;
     border-style: dashed;
@@ -53,6 +48,15 @@ h3 {
     margin: 0 auto;
 }
 
+.weatherInfo{
+    display: block;
+    align-self:left;
+    font-family: 'Chelsea Market', cursive;
+    font-size: 22px;
+    color:#75B6E0 ;
+    opacity: 40%;
+    padding-top: 40px;
+}
 
 /*Third Row, Five Day of the Week Labels */
 .label{
