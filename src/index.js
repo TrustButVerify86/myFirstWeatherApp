@@ -152,7 +152,7 @@ function DisplayWeatherInfo(event){
 
   //Change Condition element to current call
   let conditionElement=document.querySelector("#condition");
-  conditionElement.innerHTML=`${condition}`
+  conditionElement.innerHTML=`Condition: ${condition}`
 
   //Update Time in time element
   timeStamp.innerHTML = `${currentHour}:${currentMinutes}`;
