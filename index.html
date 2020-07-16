@@ -21,19 +21,19 @@
 		</div>
 		
 		<!---Second Row, Location Label/Temp and Choose City Label/ Search Bar/ Buttons -->
-		<div class="row">
-		<div class="col-3 textstyle " >
+		<div class="row justify-content-center">
+		<div class="col-sm-auto textstyle " >
 			<span class="textstyle" id="cityName">reseda,ca</span>
 			<h3 id="date">Tue 6/20/2020 </h3><h3 id="time">12:00pm</h3>
-		<div class="col-sm" >
+		<div class="col-sm-auto" >
 			<span class="currentTemp" id="currentTemp">	68</span><a href="" title="faren" id="faren">°F</a>/<a href="" title="Celsius" id="celsius">°C</a>	
 			</div>
 			
 		</div>
 	
-		<div class="col-1" >
+		<div class="col-sm-auto" >
 			<span><h2 class="emoji">☀️</h2></span></div>
-			<div class="col-3 " >
+			<div class="col-sm-auto " >
 				<ul>
 			<span ><li class ="weatherInfo" id="condition">Condition</li>
 			<li class ="weatherInfo" id="humidity">Humidity</li>
@@ -41,75 +41,74 @@
 			</ul>
 		</div>
 		
-		<div class="col-md textstyle align-self-start">
+		<div class="col-md-auto textstyle ">
 				city location
 				<form id="citySearch">
-						<div class="form-row inputBar" id="input" >
+						<div class="form-row inputBar col-sm-auto" id="input" >
 								<input type="text" class="form-control " id="inlineFormInputName" >
 						</div> 
-						<div class="col tempbutton ">
+						<!---<div class="col-sm-auto tempbutton ">-->
 							<button type="submit" value="submit" form="citySearch"class="searchbutton"id="submitCity">🔎 </button>
+							
 							<button type="submit"  class="searchbutton" id="geoLoc">📍</button>
-						</div>
+						<!---</div>-->
 						
 				</form>
 				</div>
 		</div>
 		
-		<!---Third Row, Five Day Forecast Day of the Week Labels-->
-		
-				<div class="fivedayforecast">
-				<div class="row row-cols-5 ">
+		<!---Third Row, Five Day Forecast -->
+			<div class="row  justify-content-center">
+				<div class="col-sm-auto label align-self-end " id="dayOne">
+					mon
 						
-						<div class="col label align-self-end " id="dayOne">
-							mon
-						</div>
-						<div class="col label align-self-end " id="dayTwo">
-							tue
-						</div>
-						<div class="col label align-self-end " id="dayThree">
-							wed
-						</div>
-						<div class="col label align-self-end " id="dayFour">
-							thur
-						</div>
-						<div class="col label align-self-end " id="dayFive">
-							fri
-						</div>
-			</div>
-		<!---Fourth Row, Five Day High Temps -->
-			<div class="row row-cols-5 ">
-						
-				<div class="col  hightemp" id="dayOneHighTemp">
+				<div class="col-sm-auto  hightemp" id="dayOneHighTemp">
 					78°F<br/>🌥️
-					<div class="col lowtemp"id="dayOneLowTemp">
+					<div class="col-sm-auto lowtemp"id="dayOneLowTemp">
 						58°F<br/>
 					</div>
 				</div>
-				<div class="col hightemp"id="dayTwoHighTemp">
+			</div>
+			<div class="col-sm-auto label align-self-end " id="dayTwo">
+				tue
+			
+				<div class="col-sm-auto hightemp"id="dayTwoHighTemp">
 					82°F<br/>☀️
-					<div class="col lowtemp"id="dayTwoLowTemp">
+					<div class="col-sm-auto lowtemp"id="dayTwoLowTemp">
 						63°F
 					</div>
 				</div>
-				<div class="col hightemp"id="dayThreeHighTemp">
+			</div>
+			<div class="col-sm-auto label align-self-end " id="dayThree">
+				wed
+			
+				<div class="col-sm-auto hightemp"id="dayThreeHighTemp">
 					80°F<br/>☀️
-					<div class="col lowtemp"id="dayThreeLowTemp">
+					<div class="col-sm-auto lowtemp"id="dayThreeLowTemp">
 						68°F
 					</div>
 				</div>
-				<div class="col hightemp"id="dayFourHighTemp">
+			</div>
+			<div class="col-sm-auto label align-self-end " id="dayFour">
+				thur
+			
+				<div class="col-sm-auto hightemp"id="dayFourHighTemp">
 					81°F<br/>⛅
-					<div class="col lowtemp"id="dayFourLowTemp">
+					<div class="col-sm-auto lowtemp"id="dayFourLowTemp">
 						68°F
 					</div>
 				</div>
-				<div class="col hightemp"id="dayFiveHighTemp">
+			</div>
+			<div class="col-sm-auto label align-self-end " id="dayFive">
+				fri
+			
+				<div class="col-sm-auto hightemp"id="dayFiveHighTemp">
 					95°F<br/>🌪️
-					<div class="col lowtemp"id="dayFiveLowTemp">
+					<div class="col-sm-auto lowtemp"id="dayFiveLowTemp">
 						73°F
 					<div>
 				</div>
+			</div>
 		</div>
 	
 		</div>
