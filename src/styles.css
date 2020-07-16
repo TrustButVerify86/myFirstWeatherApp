@@ -93,13 +93,13 @@ h3 {
 }
 
 /*Original Div: Everything is contained within this division */
-.container {
+.container-fluid {
   background-image: radial-gradient(
     circle farthest-corner at 10% 20%,
     rgba(7, 121, 222, 1) 0%,
     rgba(20, 72, 140, 1) 90%
   );
-  border-radius: 75px 30px 75px 30px;
+  border-radius: 75px 30px ;
   height: auto;
 }
 
@@ -118,6 +118,9 @@ h3 {
 .searchbar {
   padding-left: 50%;
 }
-a{
-  color: #a8edea;  
+#link{
+  color: #f77f3a;  
+}
+#link:hover{
+  color:#fffdfb; ; 
 }
