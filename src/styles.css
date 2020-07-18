@@ -25,11 +25,13 @@ h3 {
   display: block;
   align-self: center;
   font-family: "Chelsea Market", cursive;
-  font-size: 22px;
-  color: #75b6e0;
-  opacity: 40%;
+  font-weight: bolder;
+  font-size: 25px;
+  color: #c05d24;
+  opacity: 75%;
   padding-top: 20px;
   line-height: 20px;
+ 
 }
 .li{
     padding:0 auto;
@@ -118,9 +120,9 @@ h3 {
 .searchbar {
   padding-left: 50%;
 }
-#link{
+.link{
   color: #f77f3a;  
 }
-#link:hover{
+.link:hover{
   color:#fffdfb; ; 
 }

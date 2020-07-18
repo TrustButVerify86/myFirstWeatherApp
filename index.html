@@ -21,25 +21,29 @@
 		</div>
 		
 		<!---Second Row, Location Label/Temp and Choose City Label/ Search Bar/ Buttons -->
-		<div class="row justify-content-center">
-		<div class="col-sm-auto textstyle " >
-			<span class="textstyle" id="cityName">reseda,ca</span>
-			<h3 id="date">Tue 6/20/2020 </h3><h3 id="time">12:00pm</h3>
-		<div class="col-sm-auto" >
-			<span class="currentTemp" id="currentTemp">	68</span><a href="" title="faren" id="faren">°F</a>/<a href="" title="Celsius" id="celsius">°C</a>	
-			</div>
-			
-		</div>
-	
-		<div class="col-sm-auto" >
-			<span><h2 class="emoji">☀️</h2></span></div>
-			<div class="col-sm-auto " >
+		<div class="row justify-content-center flex-column-reverse flex-md-row">
+			<div class="col-sm-auto" >
+				<h3 id="date">Tue 6/20/2020 </h3><h3 id="time">12:00pm</h3>
+			</div>	
+			<div class="col-sm-auto text-center text-md-left" >
 				<ul>
 			<span ><li class ="weatherInfo" id="condition">Condition</li>
 			<li class ="weatherInfo" id="humidity">Humidity</li>
 			<li class ="weatherInfo" id="windSpeed">Wind</li></span>
 			</ul>
 		</div>
+		<div class="col-sm-auto text-center" >
+			<span><h2 class="emoji">☀️</h2></span>
+		</div>
+		<div class="col-sm-auto textstyle " >
+			<span class="textstyle" id="cityName">reseda,ca</span>
+			
+			<div class="col-sm-auto" >
+				<span class="currentTemp" id="currentTemp">	68</span><a href="" title="faren" class="link" id="faren">°F</a>/<a href="" title="Celsius" class="link" id="celsius">°C</a>	
+			</div>
+		</div>
+		
+
 		
 		<div class="col-md-auto textstyle ">
 				city location
@@ -118,7 +122,7 @@
 		<footer >
 		 
 			<br/><br/><br/>
-			<h3><a href="https://github.com/TrustButVerify86/myFirstWeatherApp" target="_blank" id="link"> open source </a>coded by constance mayaki</h3>
+			<h3><a href="https://github.com/TrustButVerify86/myFirstWeatherApp" target="_blank" class="link"> open source </a>coded by constance mayaki</h3>
     </footer>
 		
 			 
