@@ -26,9 +26,9 @@ h3 {
   align-self: center;
   font-family: "Chelsea Market", cursive;
   font-weight: bolder;
-  font-size: 25px;
-  color: #c05d24;
-  opacity: 75%;
+  font-size: 23px;
+  color: #f77f3a;
+  opacity: 65%;
   padding-top: 20px;
   line-height: 20px;
  
@@ -39,14 +39,19 @@ h3 {
 }
 /*Second Row, Location Temp */
 .currenttemp {
-  border-radius: 10px;
-  border-style: dashed;
-  width: 200px;
-  height: 150px;
+  
   text-align: center;
   font-size: 50px;
   font-family: "Chelsea Market", cursive;
   margin: 0 auto;
+}
+.borderStyle{
+  border-radius: 10px;
+  border-style: outset;
+  width: auto;
+  height: auto;
+  border-width: 10.5px;
+  
 }
 .emoji{
     padding-top: 40px;
@@ -103,6 +108,7 @@ h3 {
   );
   border-radius: 75px 30px ;
   height: auto;
+  padding: 10px;
 }
 
 .searchbutton {
@@ -126,3 +132,6 @@ h3 {
 .link:hover{
   color:#fffdfb; ; 
 }
+ul {
+  padding: 0;
+ }

@@ -22,10 +22,8 @@
 		
 		<!---Second Row, Location Label/Temp and Choose City Label/ Search Bar/ Buttons -->
 		<div class="row justify-content-center flex-column-reverse flex-md-row">
-			<div class="col-sm-auto" >
-				<h3 id="date">Tue 6/20/2020 </h3><h3 id="time">12:00pm</h3>
-			</div>	
-			<div class="col-sm-auto text-center text-md-left" >
+				
+			<div class="col-sm-auto text-center text-md-left " >
 				<ul>
 			<span ><li class ="weatherInfo" id="condition">Condition</li>
 			<li class ="weatherInfo" id="humidity">Humidity</li>
@@ -33,13 +31,16 @@
 			</ul>
 		</div>
 		<div class="col-sm-auto text-center" >
-			<span><h2 class="emoji">☀️</h2></span>
+			<span><h2 class="emoji" id="emoji">☀️</h2></span>
 		</div>
-		<div class="col-sm-auto textstyle " >
+		<div class="col-sm-auto textstyle borderStyle " >
 			<span class="textstyle" id="cityName">reseda,ca</span>
 			
 			<div class="col-sm-auto" >
 				<span class="currentTemp" id="currentTemp">	68</span><a href="" title="faren" class="link" id="faren">°F</a>/<a href="" title="Celsius" class="link" id="celsius">°C</a>	
+				<div class="col-sm-auto " >
+					<h3 id="date">Tue 6/20/2020 </h3><h3 id="time">12:00pm</h3>
+				</div>
 			</div>
 		</div>
 		
@@ -67,7 +68,7 @@
 					mon
 						
 				<div class="col-sm-auto  hightemp" id="dayOneHighTemp">
-					78°F<br/>🌥️
+					78°F<br/><span id="emoji1">🌥️</span>
 					<div class="col-sm-auto lowtemp"id="dayOneLowTemp">
 						58°F<br/>
 					</div>
@@ -77,7 +78,7 @@
 				tue
 			
 				<div class="col-sm-auto hightemp"id="dayTwoHighTemp">
-					82°F<br/>☀️
+					82°F<br/><span id="emoji2">🌥☀️</span>
 					<div class="col-sm-auto lowtemp"id="dayTwoLowTemp">
 						63°F
 					</div>
@@ -87,7 +88,7 @@
 				wed
 			
 				<div class="col-sm-auto hightemp"id="dayThreeHighTemp">
-					80°F<br/>☀️
+					80°F<br/><span id="emoji3">🌥️</span>
 					<div class="col-sm-auto lowtemp"id="dayThreeLowTemp">
 						68°F
 					</div>
@@ -97,7 +98,7 @@
 				thur
 			
 				<div class="col-sm-auto hightemp"id="dayFourHighTemp">
-					81°F<br/>⛅
+					81°F<br/><span id="emoji4">🌥️</span>
 					<div class="col-sm-auto lowtemp"id="dayFourLowTemp">
 						68°F
 					</div>
@@ -107,7 +108,7 @@
 				fri
 			
 				<div class="col-sm-auto hightemp"id="dayFiveHighTemp">
-					95°F<br/>🌪️
+					95°F<br/><span id="emoji5">🌪️</span>
 					<div class="col-sm-auto lowtemp"id="dayFiveLowTemp">
 						73°F
 					<div>
