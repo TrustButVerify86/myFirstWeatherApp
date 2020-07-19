@@ -76,6 +76,7 @@ let celsTemp=null;
 let locApi=null;
 let lat=null;
 let lon=null;
+let mainEmoji=null;
 
   
 
@@ -89,7 +90,6 @@ function ShowConsole(response){
     event.preventDefault();
     let currentCity = document.querySelector("#inlineFormInputName");
     userCity= currentCity.value;
-    console.log(userCity);
     currentDayUrlApi =`https://api.openweathermap.org/data/2.5/weather?q=${userCity}&units=imperial&appid=${apiKey}`;
     axios.get(currentDayUrlApi).then(GetWeatherInfo);
   }
@@ -120,6 +120,7 @@ function ShowConsole(response){
 
 //Call all API data into variables
 function GetWeatherInfo(response){
+  console.log(response);
   apiCity=response.data.name;
   apiCountry=response.data.sys.country;
   apiTemp=response.data.main.temp;
@@ -129,6 +130,8 @@ function GetWeatherInfo(response){
   farenTemp=Math.round(apiTemp);
   let convertTemp=(farenTemp-32)*.55;
   celsTemp=Math.round(convertTemp);
+  mainEmoji=response.data.weather[0].icon;
+  console.log(mainEmoji);
   DisplayWeatherInfo()
 }
 
@@ -153,6 +156,11 @@ function DisplayWeatherInfo(event){
   //Change Condition element to current call
   let conditionElement=document.querySelector("#condition");
   conditionElement.innerHTML=`Condition: ${condition}`
+
+    //Change weather Emoji element to current call
+    let emojiElement=document.querySelector("#emoji");
+    emojiElement.setAttribute("src",`http://openweathermap.org/img/wn/${mainEmoji}@2x.png`);
+    
 
   //Update Time in time element
   timeStamp.innerHTML = `${currentHour}:${currentMinutes}`;
