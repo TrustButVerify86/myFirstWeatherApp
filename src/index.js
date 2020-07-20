@@ -77,6 +77,9 @@ let locApi=null;
 let lat=null;
 let lon=null;
 let mainEmoji=null;
+let apiForecastTemp=null;
+let forecastDayUrlApi=null;
+let forecastLocApi=null;
 
   
 
@@ -90,8 +93,12 @@ function ShowConsole(response){
     event.preventDefault();
     let currentCity = document.querySelector("#inlineFormInputName");
     userCity= currentCity.value;
+    //Call Current Day Forecast API
     currentDayUrlApi =`https://api.openweathermap.org/data/2.5/weather?q=${userCity}&units=imperial&appid=${apiKey}`;
     axios.get(currentDayUrlApi).then(GetWeatherInfo);
+    //Call 5 Day Forecast API
+    forecastDayUrlApi=`https://api.openweathermap.org/data/2.5/forecast?q=${userCity}&units=imperial&appid=${apiKey}`;
+    axios.get(forecastDayUrlApi).then(GetWeatherInfo);
   }
   
   let clkMe = document.querySelector("#submitCity");
@@ -102,8 +109,14 @@ function ShowConsole(response){
   function logPosition(position) {
     lon = position.coords.longitude;
     lat = position.coords.latitude;
+    //Call Current Day Forecast API
     locApi = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
     axios.get(locApi).then(GetWeatherInfo);
+    //Call 5 Day Forecast API
+    forecastLocApi=`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
+     
+     axios.get(forecastLocApi).then(GetWeatherInfo);
+
   
   }
   
@@ -131,7 +144,6 @@ function GetWeatherInfo(response){
   let convertTemp=(farenTemp-32)*.55;
   celsTemp=Math.round(convertTemp);
   mainEmoji=response.data.weather[0].icon;
-  console.log(mainEmoji);
   DisplayWeatherInfo()
 }
 
@@ -183,6 +195,8 @@ function Cdegrees(event) {
   event.preventDefault();
   let cDeg = document.querySelector("#currentTemp");
   cDeg.innerHTML = `${celsTemp}`;
+  cDeg.classList.add("active");
+  
 }
 celsiusDeg.onclick = Cdegrees;
 
@@ -190,6 +204,8 @@ function Fdegrees(event) {
   event.preventDefault();
   let fDeg = document.querySelector("#currentTemp");
   fDeg.innerHTML = `${farenTemp}`;
+  
+  fDeg.classList.add("active");
 }
 farenDeg.onclick = Fdegrees;
 
