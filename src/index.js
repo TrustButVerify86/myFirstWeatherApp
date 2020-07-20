@@ -144,6 +144,7 @@ function GetWeatherInfo(response){
   let convertTemp=(farenTemp-32)*.55;
   celsTemp=Math.round(convertTemp);
   mainEmoji=response.data.weather[0].icon;
+  console.log(mainEmoji);
   DisplayWeatherInfo()
 }
 
@@ -171,7 +172,7 @@ function DisplayWeatherInfo(event){
 
     //Change weather Emoji element to current call
     let emojiElement=document.querySelector("#emoji");
-    emojiElement.setAttribute("src",`http://openweathermap.org/img/wn/${mainEmoji}@2x.png`);
+    emojiElement.setAttribute("src",`https://openweathermap.org/img/wn/${mainEmoji}@2x.png`);
     
 
   //Update Time in time element
