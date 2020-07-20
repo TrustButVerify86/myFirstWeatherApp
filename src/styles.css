@@ -48,8 +48,8 @@ h3 {
 .borderStyle{
   flex-shrink: 0;
 	margin: 20px;
-	height: calc(150px + 6vw);
-	width: calc(170px + 6vw);
+	height: auto;
+	width: auto;
 	border: calc(8px + 0.2vw) solid transparent;
 	background-origin: border-box;
 	background-clip: content-box, border-box;
