@@ -23,7 +23,7 @@
 		<!---Second Row, Location Label/Temp and Choose City Label/ Search Bar/ Buttons -->
 		<div class="row justify-content-center flex-column-reverse flex-md-row">
 				
-			<div class="col-sm-auto text-center text-md-left " >
+			<div class="col-sm-auto text-center text-md-left conditionSection" >
 				<ul>
 			<span ><li class ="weatherInfo" id="condition">Condition</li>
 			<li class ="weatherInfo" id="humidity">Humidity</li>
@@ -33,10 +33,10 @@
 		<div class="col-sm-auto text-center emoji" >
 			<img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" >
 		</div>
-		<div class="col-sm-auto textstyle borderStyle " >
+		<div class="col-md-auto text-center textstyle borderStyle " >
 			<span class="textstyle" id="cityName">reseda,ca</span>
 			
-			<div class="col-sm-auto" >
+			<div class="col-md-auto text-center" >
 				<span class="currentTemp" id="currentTemp">	68</span><a href="" title="faren" class="link" id="faren">°F</a>/<a href="" title="Celsius" class="link" id="celsius">°C</a>	
 				<div class="col-sm-auto " >
 					<h3 id="date">Tue 6/20/2020 </h3><h3 id="time">12:00pm</h3>
@@ -46,7 +46,7 @@
 		
 
 		
-		<div class="col-md-auto textstyle ">
+		<div class="col-md-auto textstyle boxStyle">
 				city location
 				<form id="citySearch">
 						<div class="form-row inputBar col-sm-auto" id="input" >
@@ -64,40 +64,54 @@
 		
 		<!---Third Row, Fifteen Hour Forecast -->
 			<div class="row  justify-content-center">
-				<div class="col-sm-auto label align-self-end " id="dayOne">
-					mon
+				<div class="col-sm-auto label align-self-center " id="dayOne">
+					13:00
 						
-				<div class="col-sm-auto  hightemp" id="dayOneHighTemp">
-					78°F<br/><span id="emoji1">🌥️</span>
+				<div class="col-sm-auto  hightemp">
+					<span id="emoji1">🌥️</span><br/>
+					<span class="hightemp" id="dayOneHighTemp">78°F</span>
 					
 				</div>
 			</div>
 			<div class="col-sm-auto label align-self-end " id="dayTwo">
-				tue
+				15:00
 			
-				<div class="col-sm-auto hightemp"id="dayTwoHighTemp">
-					82°F<br/><span id="emoji2">☀️</span>					
+				<div class="col-sm-auto hightemp">
+					<span id="emoji2">☀️</span><br/>
+					<span class="hightemp" id="dayTwoHighTemp"> 82°F </span>
+										
 				</div>
 			</div>
 			<div class="col-sm-auto label align-self-end " id="dayThree">
-				wed
+				18:00
 			
-				<div class="col-sm-auto hightemp"id="dayThreeHighTemp">
-					80°F<br/><span id="emoji3">🌥️</span>
+				<div class="col-sm-auto hightemp">
+					<span id="emoji3">🌥️</span><br/>
+					<span class="hightemp"id="dayThreeHighTemp">80°F</span>
 				</div>
 			</div>
 			<div class="col-sm-auto label align-self-end " id="dayFour">
-				thur
+				21:00
 			
-				<div class="col-sm-auto hightemp"id="dayFourHighTemp">
-					81°F<br/><span id="emoji4">🌥️</span>					
+				<div class="col-sm-auto hightemp">
+					<span id="emoji4">🌥️</span><br/>
+					<span class="hightemp"id="dayFourHighTemp">81°F</span>				
 				</div>
 			</div>
 			<div class="col-sm-auto label align-self-end " id="dayFive">
-				fri
+				0:00
 			
-				<div class="col-sm-auto hightemp"id="dayFiveHighTemp">
-					95°F<br/><span id="emoji5">🌪️</span>					
+				<div class="col-sm-auto hightemp">
+					<span id="emoji5">🌪️</span><br/>	
+					<span class="hightemp"id="dayFiveHighTemp"> 95°F</span>				
+				</div>
+			</div>
+			<div class="col-sm-auto label align-self-end " id="daySix">
+				3:00
+			
+				<div class="col-sm-auto hightemp">
+					<span id="emoji6">🌪️</span><br/>	
+					<span class="hightemp"id="dayFiveHighTemp"> 95°F</span>				
 				</div>
 			</div>
 		</div>
