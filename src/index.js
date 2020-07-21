@@ -80,12 +80,15 @@ let mainEmoji=null;
 let apiForecastTemp=null;
 let forecastDayUrlApi=null;
 let forecastLocApi=null;
+let forecastElement=null;
+let forecast=null;
+let forecastApiTemp=null;
+let forecastTemp=null;
+let forecastIcon=null;
 
   
 
-function ShowConsole(response){
-  console.log(response);
-}
+
 
   //Collect current City from user
 
@@ -98,24 +101,25 @@ function ShowConsole(response){
     axios.get(currentDayUrlApi).then(GetWeatherInfo);
     //Call 5 Day Forecast API
     forecastDayUrlApi=`https://api.openweathermap.org/data/2.5/forecast?q=${userCity}&units=imperial&appid=${apiKey}`;
-    axios.get(forecastDayUrlApi).then(GetWeatherInfo);
+    axios.get(forecastDayUrlApi).then(showForecast);
   }
   
   let clkMe = document.querySelector("#submitCity");
   
   clkMe.addEventListener("click", CitySearch);
   
-
+  //Call Weather using current location
   function logPosition(position) {
     lon = position.coords.longitude;
     lat = position.coords.latitude;
     //Call Current Day Forecast API
     locApi = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
     axios.get(locApi).then(GetWeatherInfo);
-    //Call 5 Day Forecast API
+
+    //Call Hourly Forecast API
     forecastLocApi=`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
      
-     axios.get(forecastLocApi).then(GetWeatherInfo);
+     axios.get(forecastLocApi).then(showForecast);
 
   
   }
@@ -128,12 +132,30 @@ function ShowConsole(response){
   let getLoc=document.querySelector("#geoLoc");
   getLoc.addEventListener("click", getCurrentPosition);
   
- 
+  function showForecast(response){
+    forecastElement=document.querySelector("#Forecast");
+    forecast=null;
+    for(let i=0;i<6;i++)
+  {
+    
+    forecast=response.data.list[i];
+   forecastApiTemp=forecast.main.temp_max;
+   forecastTemp=Math.round(forecastApiTemp);
+   forecastIcon=forecast.weather[i].icon;
+   
+   forecastElement.innerHTML+=`		
+        <div class="col-sm-auto  ">
+        13:00 <br/>
+          <img src="https://openweathermap.org/img/wn/${forecastIcon}@2x.png"/>
+          <br/>
+					<span class="hightemp" id="highTemp">${forecastTemp}°</span>
+   `;
+  }
+}
 
 
 //Call all API data into variables
 function GetWeatherInfo(response){
-  console.log(response);
   apiCity=response.data.name;
   apiCountry=response.data.sys.country;
   apiTemp=response.data.main.temp;
@@ -144,7 +166,6 @@ function GetWeatherInfo(response){
   let convertTemp=(farenTemp-32)*.55;
   celsTemp=Math.round(convertTemp);
   mainEmoji=response.data.weather[0].icon;
-  console.log(mainEmoji);
   DisplayWeatherInfo()
 }
 
