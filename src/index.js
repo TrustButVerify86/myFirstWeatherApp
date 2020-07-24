@@ -7,6 +7,8 @@ Create the date information
 //creates a new date instance
 let nowDate = new Date();
 
+let currentDate =null;
+
 //Creates an Array with all Days of the Week
 let daysOfWeek = [
   "Sunday",
@@ -37,17 +39,30 @@ let months = [
   "Dec"
 ];
 
+function formatCurrentTime(){
+  currentDate = nowDate.getDate();
+  let hours= nowDate.getHours();
+  if (hours < 10){
+    hours=`0${hours}`;
+  }
+  let minutes= nowDate.getMinutes();
+  if (minutes < 10){
+    minutes= `0${minutes}`;
+  }
+
+  return`${hours}:${minutes}`;
+}
 //Variable that calls Current Month
 let currentMonth = months[nowDate.getMonth()];
 
 //Variable that calls current date
-let currentDate = nowDate.getDate();
+//let currentDate = nowDate.getDate();
 
 // Create variable for Current Full Year
 let currentYear = nowDate.getFullYear();
 
 //variable that calls current hour
-let currentHour = nowDate.getHours();
+//let currentHour = nowDate.getHours();
 
 //variable that calls current Minutes
 let currentMinutes = nowDate.getMinutes();
@@ -55,6 +70,23 @@ let currentMinutes = nowDate.getMinutes();
 let timeStamp = document.querySelector("#time");
 let dateStamp = document.querySelector("#date");
 
+
+
+
+
+function formatForecastTime(timestamp){
+  let date = new Date(timestamp);
+  let hours= date.getHours();
+  if (hours < 10){
+    hours=`0${hours}`;
+  }
+  let minutes= date.getMinutes();
+  if (minutes < 10){
+    minutes= `0${minutes}`;
+  }
+
+  return`${hours}:${minutes}`;
+}
 //alert(`${currentDay} ${currentMonth}/${currentDate}/${currentYear}   ${currentHour}:${currentMinutes}`);
 
 
@@ -85,6 +117,10 @@ let forecast=null;
 let forecastApiTemp=null;
 let forecastTemp=null;
 let forecastIcon=null;
+let forecastDate=null;
+let forecastHours=null;
+let forecastMinutes=null;
+
 
   
 
@@ -137,18 +173,22 @@ let forecastIcon=null;
     forecast=null;
     for(let i=0;i<6;i++)
   {
-    
+    console.log(response.data);
     forecast=response.data.list[i];
    forecastApiTemp=forecast.main.temp_max;
    forecastTemp=Math.round(forecastApiTemp);
-   forecastIcon=forecast.weather[i].icon;
+   forecastIcon=forecast.weather[0].icon;
+
    
-   forecastElement.innerHTML+=`		
-        <div class="col-sm-auto  ">
-        13:00 <br/>
+   
+   forecastElement.innerHTML+=`	
+      <div class="space">
+        <div class="col-sm-auto  text-center hightemp ">
+        ${formatForecastTime(forecast.dt*1000)} <br/>
           <img src="https://openweathermap.org/img/wn/${forecastIcon}@2x.png"/>
           <br/>
-					<span class="hightemp" id="highTemp">${forecastTemp}°</span>
+          <span class="hightemp " id="highTemp">${forecastTemp}°</span>
+          </div>
    `;
   }
 }
@@ -197,7 +237,8 @@ function DisplayWeatherInfo(event){
     
 
   //Update Time in time element
-  timeStamp.innerHTML = `${currentHour}:${currentMinutes}`;
+  timeStamp.innerHTML = `${formatCurrentTime()}`;
+  //`${currentHour}:${currentMinutes}`;
  //Update Date in date element
  dateStamp.innerHTML = `${currentDay} ${currentMonth}/${currentDate}/${currentYear}`;
 }

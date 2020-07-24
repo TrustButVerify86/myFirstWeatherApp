@@ -89,7 +89,7 @@ h3 {
   color: #c3cfe2;
 }
 
-/*Fourth Row, Five Day High Temp */
+/*Third, Five Day High Temp */
 .hightemp {
   height: 150px;
   border-radius: 15px;
@@ -99,15 +99,9 @@ h3 {
   color: #c3cfe2;
 }
 
-/*Fifth Row, Five Day Low Temp */
-.lowtemp {
-  height: 80px;
-  border-radius: 15px;
-  font-size: 30px;
-  text-align: center;
-  font-family: "Chelsea Market", cursive;
-  color: #c3cfe2;
-  margin-bottom: 150px;
+.space{
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 /*Original Div: Everything is contained within this division */
