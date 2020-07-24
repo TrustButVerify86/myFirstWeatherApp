@@ -171,6 +171,7 @@ let forecastMinutes=null;
   function showForecast(response){
     forecastElement=document.querySelector("#Forecast");
     forecast=null;
+    forecastElement.innerHTML=null;
     for(let i=0;i<6;i++)
   {
     console.log(response.data);
